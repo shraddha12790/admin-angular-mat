@@ -1,0 +1,19 @@
+@import '../../variable.scss';
+
+.wrapper {
+    background: #131a17;
+    display: flex;
+
+    .left-panel {
+        width: 5%;
+        background-color: $base-panel-color;
+        position: relative;
+    }
+
+    .right-panel {
+        width: 95%;
+        padding: 20px;
+    }
+
+
+}

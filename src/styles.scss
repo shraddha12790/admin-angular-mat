@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+@import './variable.scss';
+
+html, body { height: 100%; }
+body { margin: 0; background-color: $primary-color; font-family: $font-family; color: $secondary-color;}
+.mb-50{
+    margin-bottom: $m-50;
+}
+.dis-blk{
+    display: block;
+}
+.mat-icon {
+    color: $icon-color;
+    &:hover{
+        color: $secondary-color;
+        transition: 0.3s;
+    }
+}
+button{
+    padding: 20px;
+    width: 228px;
+    text-align: left;
+    font-size: 14px;
+    outline: none;
+    background-color: $secondary-color ;
+    color: $color-white;
+    border: none;
+    box-shadow: none;
+    position: relative;
+    .mat-icon{
+        position: absolute;
+        right: 8px;
+        color: $color-white;
+        top: 15px;
+        font-weight: 400;
+    }
+}

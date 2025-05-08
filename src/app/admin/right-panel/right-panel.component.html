@@ -1,0 +1,50 @@
+<div class="right-panel-wrap">
+    <h2>Learn New Skills</h2>
+    <button type="button"><mat-icon>add</mat-icon> Explore More</button>
+    <span class="mb-50 dis-blk">One Simple Price.</span>
+    <mat-grid-list class="mb-50" cols="5"  gutterSize="15" rowHeight="2:1">
+        <mat-grid-tile><h3>PHP Developer</h3><button type="button">Learn More <mat-icon aria-hidden="false" aria-label="Example arrow_forward icon" fontIcon="arrow_forward"></mat-icon></button></mat-grid-tile>
+        <mat-grid-tile><h3>PYTHON Developer</h3><button type="button">Learn More  <mat-icon aria-hidden="false" aria-label="Example arrow_forward icon" fontIcon="arrow_forward"></mat-icon></button></mat-grid-tile>
+        <mat-grid-tile><h3>FIGMA Developer</h3><button type="button">Learn More  <mat-icon aria-hidden="false" aria-label="Example arrow_forward icon" fontIcon="arrow_forward"></mat-icon></button></mat-grid-tile>
+        <mat-grid-tile><h3>GRUNT Developer</h3><button type="button">Learn More  <mat-icon aria-hidden="false" aria-label="Example arrow_forward icon" fontIcon="arrow_forward"></mat-icon></button></mat-grid-tile>
+        <mat-grid-tile><h3>AWS Developer</h3><button type="button">Learn More  <mat-icon aria-hidden="false" aria-label="Example arrow_forward icon" fontIcon="arrow_forward"></mat-icon></button></mat-grid-tile>
+      </mat-grid-list>
+     
+      <div class="table-wrapper">
+        <div class="table-data">
+            <mat-form-field  class="full-width">
+                <mat-label>Filter</mat-label>
+                <input
+                  matInput
+                  (keyup)="applyFilter($event)"
+                  placeholder="Search Columns"
+                  #input
+                />
+              </mat-form-field>
+              <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
+                  <th mat-header-cell *matHeaderCellDef>{{ column }}</th>
+                  <td mat-cell *matCellDef="let emp">{{ emp[column] }}</td>
+                </ng-container>
+              
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let emprow; columns: displayedColumns"></tr>
+              </table>
+        </div>
+        <div class="tab-info">
+            <mat-grid-list class="mb-50" cols="3"  gutterSize="15" rowHeight="2:2">
+                <mat-grid-tile>	<mat-icon>filter_none</mat-icon> <span class="dis-blk">Courses</span></mat-grid-tile>
+                <mat-grid-tile>	<mat-icon>favorite</mat-icon><span class="dis-blk">Favorites</span></mat-grid-tile>
+                <mat-grid-tile>	<mat-icon>explore</mat-icon> <span class="dis-blk">Explore</span></mat-grid-tile>
+            </mat-grid-list>
+        
+            <mat-grid-list class="mb-50" cols="3"  gutterSize="15" rowHeight="2:2">
+                <mat-grid-tile>	<mat-icon>notification_important</mat-icon> <span class="dis-blk">Notification</span></mat-grid-tile>
+                <mat-grid-tile>	<mat-icon>warning</mat-icon> <span class="dis-blk">Alerts</span></mat-grid-tile>
+                <mat-grid-tile>	<mat-icon>contact_support</mat-icon> <span class="dis-blk">Tips</span></mat-grid-tile>
+            </mat-grid-list>
+            <button type="button">Transfer </button>
+        </div>
+      </div>
+</div>
+

@@ -1,0 +1,17 @@
+<header>
+  <div class="header-left">
+    <form class="example-form">
+      <input type="text" matInput placeholder="Search anything" [formControl]="searchcontrol" [matAutocomplete]="auto"
+        class="example-input" />
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let street of filteredStreets | async" [value]="street">
+          {{ street }}
+        </mat-option>
+      </mat-autocomplete>
+    </form>
+
+  </div>
+  <div class="header-right">
+    <a href="#"><img src="../../../assets/user.jpg" alt="user image" /></a>
+  </div>
+</header>

@@ -1,0 +1,62 @@
+@import '../../../variable.scss';
+
+.mat-grid-tile {
+    background: $base-panel-color;
+}
+ ::ng-deep .mat-grid-tile-content{
+    display: block !important;
+    padding: 20px !important;
+}
+.right-panel-wrap{
+    position: relative;
+    color: $icon-color;
+    font-weight: 500;
+    h3{
+        font-weight: 500;
+    }
+    > button{
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: center;
+    .mat-icon{
+        left: 48px;
+    }
+    }
+}
+.table-wrapper{
+    display: flex;
+    .table-data{
+        width: 61%;
+        margin-right: 18px;
+    }
+    .tab-info{
+        width: 40%;
+    }
+    table {
+        width: 100%;
+    }
+    
+    .full-width {
+        font-size: 14px;
+        width: 100%;
+    }
+    button{
+        width: 100%;
+        text-align: center;
+    }
+    ::ng-deep .mat-grid-tile-content{
+        text-align: center;
+        top: 38px !important;
+        span{
+            padding-top: 10px;
+            color: $icon-color;
+        }
+        .mat-icon{
+            font-size: 30px;
+            color: $tab-icon;
+            height: 28px;
+            width: 28px;
+        }
+    }
+}
